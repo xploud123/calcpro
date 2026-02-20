@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Catálogo de Calculadoras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login-container">
+    <h2>Faça Login</h2>
+
+    <input type="email" id="email" placeholder="E-mail" required>
+    <input type="password" id="password" placeholder="Senha" required>
+
+    <button id="login-btn">Entrar</button>
+
+    <p id="error-msg" style="color:red; display:none;">
+      Login inválido!
+    </p>
+  </div>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Client -->
+  <script src="supabase.js"></script>
+
+  <!-- Login -->
+  <script src="login.js"></script>
+
+</body>
+</html>
