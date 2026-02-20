@@ -1,9 +1,7 @@
 // auth.js
 
-async function protegerPagina() {
-  const { data, error } = await window.supabaseClient.auth.getSession();
-
-  if (error || !data.session) {
+window.supabaseClient.auth.onAuthStateChange((event, session) => {
+  if (!session) {
     window.location.replace("login.html");
   }
-}
+});
